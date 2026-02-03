@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Quiz</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+    <script src="js/storage.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id="quizTitle">Quiz</h1>
+            <div class="quiz-progress">
+                Question <span id="currentQuestionNumber">1</span> of <span id="totalQuestions">0</span>
+            </div>
+
+        </header>
+
+        <main>
+            <div id="questionContainer">
+                <p>Loading questions...</p>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+                <button id="submitBtn" class="btn" style="display: none;">Finish Quiz</button>
+            </div>
+
+
+            <div id="resultContainer" style="display: none;">
+                <h2>Result</h2>
+                <p>You scored <span id="score">0</span> out of <span id="total">0</span></p>
+                <button id="restartBtn" class="btn">Restart</button>
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
