@@ -97,12 +97,21 @@ function showQuestion(index) {
     updateButtons();
 }
 
+
+
 function updateButtons() {
+    const homeBtn = document.getElementById('homeBtn');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const submitBtn = document.getElementById('submitBtn');
 
-    prevBtn.style.display = currentQuestionIndex > 0 ? 'block' : 'none';
+    if (currentQuestionIndex === 0) {
+        homeBtn.style.display = 'block';
+        prevBtn.style.display = 'none';
+    } else {
+        homeBtn.style.display = 'none';
+        prevBtn.style.display = 'block';
+    }
 
     if (currentQuestionIndex < currentQuiz.questions.length - 1) {
         nextBtn.style.display = 'block';
@@ -155,10 +164,7 @@ function showResults() {
 function setupEventListeners() {
     document.getElementById('prevBtn').addEventListener('click', prevQuestion);
     document.getElementById('nextBtn').addEventListener('click', nextQuestion);
-
-    const submitBtn = document.getElementById('submitBtn');
-
-    submitBtn.addEventListener('click', showResults);
+    document.getElementById('submitBtn').addEventListener('click', showResults);
 
 
 

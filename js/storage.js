@@ -115,7 +115,7 @@ function initQuizzes() {
                         correctAnswer: 1
                     },
                     {
-                        text: 'Vilket är världens största ocean?',
+                        text: 'Vilket är världens största hav?',
                         options: ['Atlanten', 'Indiska oceanen', 'Stilla havet', 'Norra ishavet'],
                         correctAnswer: 2
                     },
