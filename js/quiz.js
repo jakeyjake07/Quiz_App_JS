@@ -64,17 +64,12 @@ function showQuestion(index) {
         const radio = document.createElement('input');
         radio.type = 'radio';
         radio.name = 'answer';
-        radio.value = i.toString();
+        radio.value = i;
 
         if (userAnswers[index] === i) {
             radio.checked = true;
 
         }
-
-        radio.addEventListener('change', () => {
-            userAnswers[index] = i;
-
-        });
 
         optionDiv.addEventListener('click', () => {
             radio.checked = true;
